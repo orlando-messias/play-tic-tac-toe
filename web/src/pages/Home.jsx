@@ -18,6 +18,10 @@ function Home() {
         setGame(response.data)
         setCurrentPlayer(response.data.firstPlayer)
       })
+      .catch((err) => {
+        console.error('Error trying to reach api: ', err);
+        alert(err);
+      });
   };
 
   useEffect(() => {
@@ -29,8 +33,14 @@ function Home() {
       player: currentPlayer,
       position: { x, y },
       id: game.id
-    }).then(response => setResult(response.data));
-  }
+    })
+    .then(response => setResult(response.data))
+    .catch((err) => {
+      console.error('Error trying to reach api: ', err);
+      setBoard(emptyBoard);
+      alert(err);
+    });
+  };
 
   const handleCellClick = (x, y, index) => {
     if (board[index] !== '') return null;
