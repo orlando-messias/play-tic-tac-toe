@@ -41,13 +41,13 @@ arquivo | definição
 
 **FRONTEND -**
 
-Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi construído um FrontEnd em React e disponibilizado na pasta ***web***. Para inicializar, instale as dependências do projeto com ```npm install``` e, em seguida ```npm start```. O projeto roda localmente na *porta 3000*.
+Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi construído um FrontEnd em React e disponibilizado na pasta ***web***. Para inicializar, instale as dependências do projeto com ```npm install``` e, em seguida, ```npm start```. O projeto roda localmente na *porta 3000*.
 
-O arquivo ***Home.js***, ao ser iniciado, conecta-se à API e dá inicio a um novo jogo realizando uma requisição na rota **/game**.
+- O arquivo ***Home.js***, ao ser iniciado, conecta-se à API e dá inicio a um novo jogo realizando uma requisição na rota **/game**.
 
-Cliques no tabuleiro realizam requisições à rota **/game/id/movement**.
+- Cliques no tabuleiro realizam requisições na rota **/game/id/movement**.
 
-O botão ***Restart Game*** permite realizar nova requisição à rota **/game** para novo id e nova partida.
+- O botão ***Restart Game*** permite realizar nova requisição na rota **/game** para novo id e nova partida.
 
 :camera: **Screenshots da tela**
 
