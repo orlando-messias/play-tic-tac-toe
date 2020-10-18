@@ -51,7 +51,7 @@ O botão ***Restart Game*** permite realizar nova requisição à rota **/game**
 
 :camera: **Screenshots da tela**
 
-![](/images/game01.png)
+<p align="center"><img src="/images/game-01.png"></p>
 
-![](/images/game02.png)
+<p align="center"><img src="/images/game-02.png"></p>
 
