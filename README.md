@@ -12,8 +12,8 @@ Após clonar o repositório, abra a pasta ***server*** e execute em seu terminal
 
 ```
 {
- 	"id": "d0a48ac4-eade-41e3-89a0-09982b776c60",
- 	"firstPlayer": "X"
+    "id": "d0a48ac4-eade-41e3-89a0-09982b776c60",
+    "firstPlayer": "X"
 }
 ```
 
@@ -21,9 +21,9 @@ Após clonar o repositório, abra a pasta ***server*** e execute em seu terminal
 - Requisições *post* na rota **/game/id/movement** aguardam definifir, no corpo da requisição, um movimento na partida. Exemplo:
 ```
 {
-	"player": "X",
-	"position": {"x":0 , "y": 2},
-	"id": "d0a48ac4-eade-41e3-89a0-09982b776c60"
+    "player": "X",
+    "position": {"x":0 , "y": 2},
+    "id": "d0a48ac4-eade-41e3-89a0-09982b776c60"
 }
 ```
 
@@ -53,9 +53,9 @@ services/game.js| possui as regras de negócio da aplicação
 
 **FRONTEND -**
 
-Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi construído um FrontEnd em React e disponibilizado na pasta ***web***. Para inicializar, instale as dependências do projeto com ```npm install``` e, em seguida, rode ```npm start```. O projeto roda localmente na *porta 3000*.
+Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi construído um FrontEnd em React - totalmente independente - e disponibilizado na pasta ***web***. Para inicializar, instale as dependências do projeto com ```npm install``` e, em seguida, rode ```npm start```. O projeto roda localmente na *porta 3000*.
 
-- O arquivo ***Home.jsx***, ao ser iniciado, conecta-se à API e faz uma requisição na rota **/game** dando início a um novo jogo. A partir daí, recebe o ***id*** da partida e o ***firstPlayer***.
+- O arquivo ***Home.jsx***, ao ser iniciado, conecta-se à API e faz uma requisição na rota **/game** dando início a um novo jogo. A página recebe como resposta o ***id*** da partida e o ***firstPlayer***.
 
 - Cliques no tabuleiro realizam requisições na rota **/game/id/movement** enviando a posição escolhida e o jogador da rodada.
 
