@@ -1,6 +1,6 @@
 ## API Jogo da Velha
 
-#### Desenvolvida utilizando NodeJS e Express
+#### Desenvolvida utilizando NodeJS e Express :computer:
 
 **BACKEND -**
 
@@ -9,7 +9,7 @@ Após clonar o repositório, abra a pasta ***server*** e inicialize a aplicaçã
 com ```npm install``` e rode com ```npm start```. A API roda em *localhost* na *porta 3333*.
 
 
-- Requisições *post* na rota **/game** inicializam um novo jogo com o ***id*** da partida e a definição do ***primeiro jogador***. O jogador é gerado automaticamente ```firstPlayer``` e pode ser **"X"** ou **"O"**. Exemplo de JSON retornado:
+- Requisições *post* na rota **/game** inicializam um novo jogo com o ***id*** da partida e a definição do ***primeiro jogador***. O jogador é gerado automaticamente - ```firstPlayer``` - e pode ser **"X"** ou **"O"**. Exemplo de JSON retornado:
 
 ```
 {
@@ -55,13 +55,13 @@ services/game.js| possui as regras de negócio da aplicação
 
 **FRONTEND -**
 
-Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi construído um FrontEnd em React e disponibilizado na pasta ***web***. Para inicializar, instale as dependências do projeto com ```npm install``` e, em seguida, ```npm start```. O projeto roda localmente na *porta 3000*.
+Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi construído um FrontEnd em React e disponibilizado na pasta ***web***. Para inicializar, instale as dependências do projeto com ```npm install``` e, em seguida, rode ```npm start```. O projeto roda localmente na *porta 3000*.
 
-- O arquivo ***Home.jsx***, ao ser iniciado, conecta-se à API e dá inicio a um novo jogo fazendo uma requisição na rota **/game**. Recebe o ***id*** da partida e o ***firstPlayer****
+- O arquivo ***Home.jsx***, ao ser iniciado, conecta-se à API e faz uma requisição na rota **/game** dando início a um novo jogo. A partir daí, recebe o ***id*** da partida e o ***firstPlayer***.
 
-- Cliques no tabuleiro realizam requisições na rota **/game/id/movement**.
+- Cliques no tabuleiro realizam requisições na rota **/game/id/movement** enviando a posição escolhida e o jogador da rodada.
 
-- Ao fim da partida, o botão ***Restart Game*** permite fazer nova requisição na rota **/game** para novo ***id*** e novo player.
+- Ao fim da partida, o botão ***Restart Game*** permite fazer nova requisição na rota **/game** gerando um novo ***id*** e um novo jogador.
 
 :camera: **Screenshots da tela**
 
