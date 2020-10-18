@@ -38,6 +38,7 @@ arquivo | definição
 *services/game.js*| contém a maior parte das regras de negócio
 
 ![](/images/api-folders.png)
+<img align="center" src="/images/api-folders.png">
 
 **FRONTEND -**
 
