@@ -9,7 +9,7 @@ Após clonar o repositório, abra a pasta ***server*** e inicialize a aplicaçã
 com ```npm install``` e rode com ```npm start```. A API roda em *localhost* na *porta 3333*.
 
 
-- Requisição *post* na rota **/game** inicializa um novo jogo com o ***id*** da partida, a definição do ***primeiro jogador*** e os retorna num objeto JSON. Desta forma o jogador é gerado automaticamente ```firstPlayer``` e pode ser **'X'** ou **'O'**. Exemplo:
+- Requisições *post* na rota **/game** inicializam um novo jogo com o ***id*** da partida e a definição do ***primeiro jogador***. O jogador é gerado automaticamente ```firstPlayer``` e pode ser **"X"** ou **"O"**. Exemplo de JSON retornado:
 
 ```
 {
@@ -19,7 +19,7 @@ com ```npm install``` e rode com ```npm start```. A API roda em *localhost* na *
 ```
 
 
-- Requisição *post* na rota **/game/id/movement** permite definifir, no corpo da requisição, um movimento na partida. Exemplo:
+- Requisições *post* na rota **/game/id/movement** aguardam definifir, no corpo da requisição, um movimento na partida. Exemplo:
 ```
 {
 	"player": "X",
@@ -32,14 +32,14 @@ com ```npm install``` e rode com ```npm start```. A API roda em *localhost* na *
 
 arquivo | definição
 ------------ | -------------
-*index.js* | inicializa o Express, escuta a porta 3333 e chama o arquivo de rotas routes.js
-*routes.js*| estabelece quais são as rotas da aplicação e direciona para o Controller
-*GameController.js*| controla as ações de cada chamada realizada às rotas **/game** e **/game/id/movement**
-*services/game.js*| contém a maior parte das regras de negócio
+index.js | inicializa o Express, escuta a porta 3333 e chama o arquivo de rotas routes.js
+routes.js| estabelece quais são as rotas da aplicação e direciona o fluxo para o Controller
+GameController.js| controla as ações de cada chamada realizada nas rotas **/game** e **/game/id/movement**
+services/game.js| possui as regras de negócio da aplicação
 
 ![](/images/api-folders.png)
 
-**Dependências do Projeto:**
+:wrench: **Dependências do Projeto**
 ```
 "dependencies": {
    "body-parser": "^1.19.0",
@@ -57,11 +57,11 @@ arquivo | definição
 
 Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi construído um FrontEnd em React e disponibilizado na pasta ***web***. Para inicializar, instale as dependências do projeto com ```npm install``` e, em seguida, ```npm start```. O projeto roda localmente na *porta 3000*.
 
-- O arquivo ***Home.js***, ao ser iniciado, conecta-se à API e dá inicio a um novo jogo realizando uma requisição na rota **/game**.
+- O arquivo ***Home.jsx***, ao ser iniciado, conecta-se à API e dá inicio a um novo jogo fazendo uma requisição na rota **/game**. Recebe o ***id*** da partida e o ***firstPlayer****
 
 - Cliques no tabuleiro realizam requisições na rota **/game/id/movement**.
 
-- O botão ***Restart Game*** permite realizar nova requisição na rota **/game** para novo id e nova partida.
+- Ao fim da partida, o botão ***Restart Game*** permite fazer nova requisição na rota **/game** para novo ***id*** e novo player.
 
 :camera: **Screenshots da tela**
 
