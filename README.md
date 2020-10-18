@@ -5,8 +5,9 @@
 **BACKEND -**
 
 
-Após clonar o repositório, abra a pasta ***server*** e inicialize a aplicação 
-com ```npm install``` e rode com ```npm start```. A API roda em *localhost* na *porta 3333*.
+Após clonar o repositório, abra a pasta ***server*** e utilize os comandos ```npm install``` e ```npm start```. A API roda em *localhost* na *porta 3333*.
+
+É possível também executar o arquivo no terminal ```./runScripts.sh``` que automatiza as instalações de dependências e o start.
 
 
 - Requisições *post* na rota **/game** inicializam um novo jogo com o ***id*** da partida e a definição do ***primeiro jogador***. O jogador é gerado automaticamente - ```firstPlayer``` - e pode ser **"X"** ou **"O"**. Exemplo de JSON retornado:
