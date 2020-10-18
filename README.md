@@ -13,8 +13,8 @@ com ```npm install``` e rode com ```npm start```. A API roda em *localhost* na *
 
 ```
 {
-	"id": "d0a48ac4-eade-41e3-89a0-09982b776c60",
-    "firstPlayer": "X"
+ 	"id": "d0a48ac4-eade-41e3-89a0-09982b776c60",
+ 	"firstPlayer": "X"
 }
 ```
 
@@ -37,7 +37,7 @@ arquivo | definição
 *GameController.js*| controla as ações de cada chamada realizada às rotas **/game** e **/game/id/movement**
 *services/game.js*| contém a maior parte das regras de negócio
 
-
+![/images/api-folders.png]
 
 **FRONTEND -**
 
