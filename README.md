@@ -35,6 +35,7 @@ index.js | inicializa o Express, escuta a porta 3333 e chama o arquivo de rotas 
 routes.js| estabelece quais são as rotas da aplicação e direciona o fluxo para o Controller
 GameController.js| controla as ações de cada chamada realizada nas rotas **/game** e **/game/id/movement**
 services/game.js| possui as regras de negócio da aplicação
+runScripts.sh | script que executa os comandos npm install e npm start automaticamente
 
 ![](/images/api-folders.png)
 
