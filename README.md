@@ -39,6 +39,20 @@ arquivo | definição
 
 ![](/images/api-folders.png)
 
+**Dependências do Projeto:**
+```
+"dependencies": {
+   "body-parser": "^1.19.0",
+   "express: "^4.17.1",
+   "uuid": "^8.3.1"
+},
+"devDependencies": {
+   "nodemon": "^2.0.5"
+}
+
+```
+
+
 **FRONTEND -**
 
 Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi construído um FrontEnd em React e disponibilizado na pasta ***web***. Para inicializar, instale as dependências do projeto com ```npm install``` e, em seguida, ```npm start```. O projeto roda localmente na *porta 3000*.
