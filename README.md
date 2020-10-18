@@ -1,6 +1,6 @@
-## API Jogo da Velha
+# API Jogo da Velha
 
-#### Desenvolvida utilizando NodeJS e Express :computer:
+#### Desenvolvida utilizando NodeJS e Express  :computer:
 
 **BACKEND -**
 
@@ -49,9 +49,8 @@ services/game.js| possui as regras de negócio da aplicação
 "devDependencies": {
    "nodemon": "^2.0.5"
 }
-
 ```
-
+##
 
 **FRONTEND -**
 
