@@ -37,7 +37,7 @@ arquivo | definição
 *GameController.js*| controla as ações de cada chamada realizada às rotas **/game** e **/game/id/movement**
 *services/game.js*| contém a maior parte das regras de negócio
 
-<p align="center"><img src="/images/api-folders.png"></p>
+![](/images/api-folders.png)
 
 **FRONTEND -**
 
