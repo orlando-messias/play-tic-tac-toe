@@ -1,0 +1,106 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  background-color: #eee;
+  display: grid;
+  font-family: sans-serif;
+  height: 100vh;
+  justify-content: center;
+}
+
+.title {
+  color: rgb(102, 102, 102);
+  font-family: 'Pacifico', cursive; 
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.logo {
+  filter: invert(200%);
+  padding: 0px 50px;
+  position: absolute;
+  width: 210px;
+}
+
+.board {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 240px);
+  grid-template-rows: repeat(3, 200px);
+}
+
+.board.game-over {
+  opacity: 0.7;
+}
+
+.board.game-over:nth-child() {
+  box-shadow: none;
+}
+
+.cell {
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  color: #00000066;
+  cursor: pointer;
+  display: grid;
+  font-size: 4rem;
+  font-weight: bold;
+  justify-content: center;
+}
+
+.cell.O, .cell.X, .game-over .cell {
+  cursor: not-allowed;
+}
+
+.cell:not(.O):not(.X):not(.game-over):hover {
+  box-shadow: 0 0px 15px grey;
+}
+
+.cell.O {
+  background-color: #4a89bd;
+}
+
+.cell.X {
+  background-color: #e2645a;
+}
+
+footer {
+  text-align: center;
+}
+
+button {
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.6);
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  transition: background-color 1s;
+}
+
+button:hover {
+  background-color: #27c23b;
+  box-shadow: 0px 0px 8px rgb(167, 167, 167);
+}
+
+.winner-message {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.winner-message span.O {
+  color: #2196f3;
+}
+
+.winner-message span.X {
+  color: #f44336;
+}
