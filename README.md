@@ -50,5 +50,7 @@ Cliques no tabuleiro realizam requisições à rota **/game/id/movement**.
 O botão ***Restart Game*** permite realizar nova requisição à rota **/game** para novo id e nova partida.
 
 :camera: **Screenshots da tela**
+
 ![](/images/game01.png)
+![](/images/game02.png)
 
