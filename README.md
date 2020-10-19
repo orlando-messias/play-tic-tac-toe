@@ -65,8 +65,10 @@ Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi con
 :camera: **Screenshots de telas**
 
 <p align="center"><img src="/images/game01.png"></p>
+
 > Durante uma partida
 
 <p align="center"><img src="/images/game02.png"></p>
+
 > Fim de uma partida
 
