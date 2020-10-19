@@ -64,11 +64,10 @@ Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi con
 
 :camera: **Screenshots de telas**
 
+> Durante uma partida
 <p align="center"><img src="/images/game01.png"></p>
 
-> Durante uma partida
-
+> Fim de uma partida
 <p align="center"><img src="/images/game02.png"></p>
 
-> Fim de uma partida
 
