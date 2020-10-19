@@ -1,6 +1,6 @@
 # API Jogo da Velha
 
-#### Desenvolvida utilizando NodeJS e Express  :computer:
+#### :computer: Desenvolvida utilizando NodeJS e Express  :computer:
 
 **BACKEND -**
 
@@ -56,7 +56,7 @@ runScripts.sh | script que executa os comandos npm install e npm start automatic
 
 Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi construído um FrontEnd em React - totalmente independente - e disponibilizado na pasta ***web***. Para inicializar, instale as dependências do projeto com ```npm install``` e, em seguida, rode ```npm start```. O projeto roda localmente na *porta 3000*.
 
-- O arquivo ***Home.jsx***, ao ser iniciado, conecta-se à API e faz uma requisição na rota **/game** dando início a um novo jogo. A página recebe como resposta o ***id*** da partida e o ***firstPlayer***.
+- A página ***Home.jsx***, ao ser iniciada, conecta-se à API e faz uma requisição na rota **/game** dando início a um novo jogo. A página recebe como resposta o ***id*** da partida e o ***firstPlayer***.
 
 - Cliques no tabuleiro realizam requisições na rota **/game/id/movement** enviando a posição escolhida e o jogador da rodada.
 
@@ -64,10 +64,10 @@ Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi con
 
 :camera: **Screenshots de telas**
 
-> Durante uma partida
+1. *Durante uma partida*
 <p align="center"><img src="/images/game01.png"></p>
 
-> Fim de uma partida
+2. *Fim de uma partida*
 <p align="center"><img src="/images/game02.png"></p>
 
 
