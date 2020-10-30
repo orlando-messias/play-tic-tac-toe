@@ -3,10 +3,10 @@ import { Component } from 'react';
 
 class Cell extends Component {
   render() {
-    const { cell, onClick } = this.props;
+    const { cell, onClick, value } = this.props;
     return (
-      <div className={cell} onClick={(x, y) => onClick(x, y)}>
-        {this.props.children}
+      <div className={`cell ${value}`} onClick={(x, y) => onClick(x, y)}>
+        {value}
       </div>
     );
   };

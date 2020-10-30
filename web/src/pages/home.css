@@ -23,9 +23,11 @@ body {
 
 .logo {
   filter: invert(200%);
+  left: 50px;
+  top: 20px;
   padding: 0px 50px;
   position: absolute;
-  width: 210px;
+  width: 220px;
 }
 
 .board {

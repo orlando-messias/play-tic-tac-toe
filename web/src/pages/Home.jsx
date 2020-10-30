@@ -34,12 +34,12 @@ function Home() {
       position: { x, y },
       id: game.id
     })
-    .then(response => setResult(response.data))
-    .catch((err) => {
-      console.error('Error trying to reach api: ', err);
-      setBoard(emptyBoard);
-      alert(err);
-    });
+      .then(response => setResult(response.data))
+      .catch((err) => {
+        console.error('Error trying to reach api: ', err);
+        setBoard(emptyBoard);
+        alert(err);
+      });
   };
 
   const handleCellClick = (x, y, index) => {
@@ -61,38 +61,28 @@ function Home() {
     setResult({});
   }
 
+  const positions = [
+    [0, 2],
+    [1, 2],
+    [2, 2],
+    [0, 1],
+    [1, 1],
+    [2, 1],
+    [0, 0],
+    [1, 0],
+    [2, 0],
+  ];
+
   return (
     <main>
-      <img src={tictactoe} className="logo" alt=""/>
+      <img src={tictactoe} className="logo" alt="" />
       <h1 className="title">Tic Tac Toe Game</h1>
+
       <div className={`board ${result.winner ? "game-over" : ""}`}>
-        <Cell cell={`cell ${board[0]}`} onClick={() => handleCellClick(0, 2, 0)}>
-          {board[0]}
-        </Cell>
-        <Cell cell={`cell ${board[1]}`} onClick={() => handleCellClick(1, 2, 1)}>
-          {board[1]}
-        </Cell>
-        <Cell cell={`cell ${board[2]}`} onClick={() => handleCellClick(2, 2, 2)}>
-          {board[2]}
-        </Cell>
-        <Cell cell={`cell ${board[3]}`} onClick={() => handleCellClick(0, 1, 3)}>
-          {board[3]}
-        </Cell>
-        <Cell cell={`cell ${board[4]}`} onClick={() => handleCellClick(1, 1, 4)}>
-          {board[4]}
-        </Cell>
-        <Cell cell={`cell ${board[5]}`} onClick={() => handleCellClick(2, 1, 5)}>
-          {board[5]}
-        </Cell>
-        <Cell cell={`cell ${board[6]}`} onClick={() => handleCellClick(0, 0, 6)}>
-          {board[6]}
-        </Cell>
-        <Cell cell={`cell ${board[7]}`} onClick={() => handleCellClick(1, 0, 7)}>
-          {board[7]}
-        </Cell>
-        <Cell cell={`cell ${board[8]}`} onClick={() => handleCellClick(2, 0, 8)}>
-          {board[8]}
-        </Cell>
+        {board.map((value, index) => {
+          const [a, b] = positions[index];
+          return <Cell value={value} onClick={() => handleCellClick(a, b, index)} />
+        })}
       </div>
 
       {result.winner && result.winner !== 'Draw' &&
