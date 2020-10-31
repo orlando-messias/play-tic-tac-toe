@@ -23,20 +23,22 @@ body {
 
 .logo {
   filter: invert(200%);
+  left: 50px;
+  top: 20px;
   padding: 0px 50px;
   position: absolute;
-  width: 210px;
+  width: 220px;
 }
 
 .board {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, 240px);
-  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 180px);
 }
 
 .board.game-over {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .board.game-over:nth-child() {
