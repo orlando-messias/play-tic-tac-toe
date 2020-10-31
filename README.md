@@ -71,6 +71,6 @@ Para melhor demonstração das funcionalidades da **API Jogo da Velha**, foi con
 <p align="center"><img src="/images/game02.png"></p>
 
 3. *Demo:*
-<p align="center"><img src="/images/demo.gif"></p>
+<p align="center"><img src="/images/demo_.gif"></p>
 
 
