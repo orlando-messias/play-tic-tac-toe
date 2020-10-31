@@ -33,12 +33,12 @@ body {
 .board {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(3, 240px);
-  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 180px);
 }
 
 .board.game-over {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .board.game-over:nth-child() {
