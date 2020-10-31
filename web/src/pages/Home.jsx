@@ -1,16 +1,12 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { GameContext } from '../context/GameContext';
 import api from '../services/api';
 import './home.css';
 import Cell from './Cell';
 import tictactoe from '../images/tic-tac-toe.png';
 
 function Home() {
-  const emptyBoard = Array(9).fill("");
-  const [board, setBoard] = useState(emptyBoard);
-  const [currentPlayer, setCurrentPlayer] = useState('');
-  const [game, setGame] = useState({});
-  const [result, setResult] = useState({});
+  const { board, setBoard, setCurrentPlayer, setGame, result, setResult } = useContext(GameContext);
 
   const newGame = () => {
     api.post('game')
@@ -28,36 +24,9 @@ function Home() {
     newGame();
   }, []);
 
-  const makeMomevement = (x, y) => {
-    api.post(`/game/${game.id}/movement`, {
-      player: currentPlayer,
-      position: { x, y },
-      id: game.id
-    })
-      .then(response => setResult(response.data))
-      .catch((err) => {
-        console.error('Error trying to reach api: ', err);
-        setBoard(emptyBoard);
-        alert(err);
-      });
-  };
-
-  const handleCellClick = (x, y, index) => {
-    if (board[index] !== '') return null;
-    if (result.winner) return null;
-
-    setBoard(
-      board.map((item, itemIndex) => itemIndex === index ? currentPlayer : item)
-    );
-
-    setCurrentPlayer(currentPlayer === 'X' ? 'O' : 'X');
-
-    makeMomevement(x, y);
-  }
-
   const resetGame = () => {
     newGame();
-    setBoard(emptyBoard);
+    setBoard(Array(9).fill(null));
     setResult({});
   }
 
@@ -81,7 +50,7 @@ function Home() {
       <div className={`board ${result.winner ? "game-over" : ""}`}>
         {board.map((value, index) => {
           const [a, b] = positions[index];
-          return <Cell value={value} onClick={() => handleCellClick(a, b, index)} />
+          return <Cell key={index} value={value} x={a} y={b} index={index} />
         })}
       </div>
 
